@@ -1,13 +1,17 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { cart } from './modules/cart/reducer'
+
+import { cartReducer } from '../features/cart/reducer'
+import { CartStateProps } from '../features/cart/types'
+
+export interface StateProps {
+  cartReducer: CartStateProps
+}
 
 export const store = configureStore({
   reducer: {
-    cart
+    cartReducer
   }
 })
 
 // não utiliza o root reducer
 // export type rootReducer = ReturnType<typeof store.getState>
-
-console.log(store.getState())

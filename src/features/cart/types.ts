@@ -4,7 +4,7 @@ export interface ProductProps {
   price: number
 }
 
-interface CartItem {
+export interface CartItem {
   product: ProductProps
   quantity: number
 }
