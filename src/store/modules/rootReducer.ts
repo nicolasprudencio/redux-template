@@ -1,9 +1,7 @@
 import { combineReducers } from 'redux'
 
-import { cartReducer } from '../../features/cart/reducer'
+import { cartReducer } from '../../features/cart/cart-slice'
 
 export const rootReducer = combineReducers({
   cartReducer
 })
-
-export type RootState = ReturnType<typeof rootReducer>

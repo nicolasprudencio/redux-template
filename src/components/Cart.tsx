@@ -4,11 +4,9 @@ import { CartItem } from '../features/cart/types'
 import { StateProps } from '../store'
 
 export function Cart() {
-  const cart = useSelector<StateProps, CartItem[]>(
-    (state) => state.cartReducer.items
-  )
+  const cart = useSelector<StateProps, CartItem[]>((state) => state.cart.items)
 
-  console.log(cart)
+  //  const cart = useAppSelector((state) => state.cartReducer.items)
 
   return (
     <table>
